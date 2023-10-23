@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>{{result.name}}</h2><br>
+
+<img src="{{result.img.url}}" width="150" height="220"><br>
+{{result.desc}}<br>
+{{result.year}}<br>
+<a class="btn btn-primary" href="{% url 'books:update' result.id %}">Update</a>
+<a class="btn btn-danger" href="{% url 'books:delete' result.id %}">Delete</a>
+{% endblock %}
